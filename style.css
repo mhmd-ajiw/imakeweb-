@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    height: 30em;
+    width: 60em;
+    padding: 30px;
+    background-color: #FFDD9C;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(156, 156, 155);
+
+    grid-template-areas: 
+        "item-img1 item-img1 text-vrt btn-vrt"
+        "text-area text-area text-vrt btn-vrt"
+        "text-area text-area item-img2 item-img2";
+}
+.item{
+    background-color: #F9B637;
+    border-radius: 15px;
+    min-width: 0;
+    min-height: 0;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: cover;
+}
