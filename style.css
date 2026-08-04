@@ -1,11 +1,54 @@
 /*
     color:
-    --#449d06: #449d06;
-    --#dae3e5: #dae3e5;
-    --#aaa489: #aaa489;
-    --#1b7501: #1b7501;
-    --#95a868: #95a868;
-    --#789d17: #789d17;
-    --#c4c9c2: #c4c9c2;
-    --#1b8f04: #1b8f04
+    --hijau fresh muda: #449d06;
+    --abu muda: #dae3e5;
+    --kuning muda: #aaa489;
+    --hijau fresh: #1b7501;
+    --hijau pucet muda: #95a868;
+    --hijau pucet: #789d17;
+    --abu: #c4c9c2;
+    --hijau: #1b8f04
 */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    align-content: center;
+}
+
+.flex-container{
+    height: 40em;
+    width: 80em;
+    margin: 0 auto;
+    background-image: url('./img/bg-img.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px 0 30px 0;
+    box-shadow: 0px 0px 20px #aaa489;
+    overflow: hidden;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: #aaa489;
+}
+.header ul{
+    display: flex;
+    gap :20px;
+}
+.header ul li{
+    list-style: none;
+    font-size: 130%;
+    font-weight: bold;
+}
