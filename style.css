@@ -60,16 +60,28 @@ body{
         color: #262e13;
         font-size: 130%;
         font-weight: bold;
+        display: block;
+        height: 100%;
+        margin-top: 3.5px;
+        margin-left: 20px;
     }
+}
+.header ul li a:hover{
+    color: #dae3e5;
 }
 #log-btn{
     font-size: 130%;
     font-weight: bold;
+    padding: 3px 20px;
     border-radius: 10px;
     color: #262e13;
     background-color: #95a868;
     border: none;
     cursor: pointer;
+}
+#log-btn:hover{
+    color: #dae3e5;
+    background-color: #262e13;
 }
 #sign-btn{
     padding: 3px 20px;
@@ -77,9 +89,14 @@ body{
     font-weight: bold;
     border-radius: 10px;
     background-color: #fff9df;
+    border: 2px solid #fff9df;
     color: #262e13;
-    border: none;
     cursor: pointer;
+}
+#sign-btn:hover{
+    border: 2px solid #fff9df;
+    background-color: #95a868;
+    color: #fff9df;
 }
 
 .main-content{
@@ -117,4 +134,7 @@ body{
 .main-content .btn-sec button:last-child{
     padding-left: 50px;
     padding-right: 50px;
+}
+.main-content .btn-sec button:hover{
+    scale: 1.1;
 }
