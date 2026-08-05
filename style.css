@@ -40,8 +40,14 @@ body{
 .header{
     display: flex;
     justify-content: space-between;
-    height: 50px;
-    background-color: #aaa489;
+    align-items: center;
+    height: 60px;
+    background-color: #95a868;
+    padding: 0 20px;
+
+    h1{
+        color: #262e13;
+    }
 }
 .header ul{
     display: flex;
@@ -49,6 +55,66 @@ body{
 }
 .header ul li{
     list-style: none;
+
+    a{
+        color: #262e13;
+        font-size: 130%;
+        font-weight: bold;
+    }
+}
+#log-btn{
     font-size: 130%;
     font-weight: bold;
+    border-radius: 10px;
+    color: #262e13;
+    background-color: #95a868;
+    border: none;
+    cursor: pointer;
+}
+#sign-btn{
+    padding: 3px 20px;
+    font-size: 120%;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #fff9df;
+    color: #262e13;
+    border: none;
+    cursor: pointer;
+}
+
+.main-content{
+    height: 100%;
+    display: flex;
+    position: relative;
+    left: 20em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    h2{
+        font-size: 200%;
+        line-height: 130%;
+        color: #156300;
+        text-shadow: 0px 0px 8px #449d06;
+    }
+    .btn-sec{
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        gap: 40px;
+    }
+}
+.main-content .btn-sec button{
+    padding: 10px 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid #185e05;
+    background-color: #fff9df;
+    color: #185e05;
+    cursor: pointer;
+}
+.main-content .btn-sec button:last-child{
+    padding-left: 50px;
+    padding-right: 50px;
 }
