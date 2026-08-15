@@ -1,140 +1,56 @@
-/*
-    color:
-    --hijau fresh muda: #449d06;
-    --abu muda: #dae3e5;
-    --kuning muda: #aaa489;
-    --hijau fresh: #1b7501;
-    --hijau pucet muda: #95a868;
-    --hijau pucet: #789d17;
-    --abu: #c4c9c2;
-    --hijau: #1b8f04
-*/
-
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-decoration: none;
 }
 
 body{
     height: 100vh;
-    align-content: center;
+    display: flex;
+    align-items: center;
 }
 
-.flex-container{
-    height: 40em;
-    width: 80em;
+.grid-flex{
+    width: 30em;
+    height: 300px;
+    background-color: rgb(221, 212, 201);
+    border-radius: 10px;
     margin: 0 auto;
-    background-image: url('./img/bg-img.jpg');
-    background-size: cover;
-    background-position: center;
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    border-radius: 30px 0 30px 0;
-    box-shadow: 0px 0px 20px #aaa489;
-    overflow: hidden;
-}
-
-.header{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 60px;
-    background-color: #95a868;
-    padding: 0 20px;
+    gap: 50px;
+}
 
-    h1{
-        color: #262e13;
-    }
-}
-.header ul{
-    display: flex;
-    gap :20px;
-}
-.header ul li{
-    list-style: none;
-
-    a{
-        color: #262e13;
-        font-size: 130%;
-        font-weight: bold;
-        display: block;
-        height: 100%;
-        margin-top: 3.5px;
-        margin-left: 20px;
-    }
-}
-.header ul li a:hover{
-    color: #dae3e5;
-}
-#log-btn{
-    font-size: 130%;
-    font-weight: bold;
-    padding: 3px 20px;
+.display{
+    width: 90%;
+    height: 50px;
+    background-color: rgb(255, 250, 250);
     border-radius: 10px;
-    color: #262e13;
-    background-color: #95a868;
-    border: none;
-    cursor: pointer;
-}
-#log-btn:hover{
-    color: #dae3e5;
-    background-color: #262e13;
-}
-#sign-btn{
-    padding: 3px 20px;
-    font-size: 120%;
-    font-weight: bold;
-    border-radius: 10px;
-    background-color: #fff9df;
-    border: 2px solid #fff9df;
-    color: #262e13;
-    cursor: pointer;
-}
-#sign-btn:hover{
-    border: 2px solid #fff9df;
-    background-color: #95a868;
-    color: #fff9df;
-}
-
-.main-content{
-    height: 100%;
     display: flex;
-    position: relative;
-    left: 20em;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 40px;
-
-    h2{
-        font-size: 200%;
-        line-height: 130%;
-        color: #156300;
-        text-shadow: 0px 0px 8px #449d06;
-    }
-    .btn-sec{
-        display: flex;
-        width: 50%;
-        justify-content: center;
-        gap: 40px;
-    }
+    align-items: center;
 }
-.main-content .btn-sec button{
-    padding: 10px 30px;
-    font-weight: bold;
+.display p{
+    font-size: 160%;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: default;
+}
+
+.btn-flex{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.btn-flex button{
+    padding: 10px;
     border-radius: 10px;
-    border: 1px solid #185e05;
-    background-color: #fff9df;
-    color: #185e05;
+    border: none;
+    width: 100px;
     cursor: pointer;
 }
-.main-content .btn-sec button:last-child{
-    padding-left: 50px;
-    padding-right: 50px;
-}
-.main-content .btn-sec button:hover{
-    scale: 1.1;
+.btn-flex button:hover{
+    background-color: rgb(99, 98, 98);
+    color: rgb(255, 255, 254);
 }
