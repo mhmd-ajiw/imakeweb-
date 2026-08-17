@@ -2,88 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 1</title>
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Exercise 2 DOM JS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="grid-flex">
-        <div class="display">
-            <p id="valDisplay"></p>
+    <div class="container">
+        <div class="input-area">
+            <input type="text" id="input-txt">
+            <button id="btn-input">Tambah</button>
         </div>
-        <div class="btn-flex">
-            <button type="button" id="tambah">Tambah</button>
-            <button type="button" id="kurang">Kurang</button>
-            <button type="button" id="reset">Reset</button>
-        </div>
+        <hr>
+        <ul id="list-area">
+
+        </ul>
     </div>
 
-
     <script>
-        const Plus = document.getElementById('tambah');
-        const Minus = document.getElementById('kurang');
-        const Reset = document.getElementById('reset');
+        const txt = document.getElementById('input-txt');
+        const btn = document.getElementById('btn-input');
+        const listForm = document.getElementById('list-area');
 
-        Plus.addEventListener('click', function() {
-            const valNum = Number(document.getElementById('valDisplay').value) || 0;
-            const result = valNum + 1;
-            
-            document.getElementById('valDisplay').value = result;
-            document.getElementById('valDisplay').textContent = result;
-        });
 
-        Minus.addEventListener('click', function() {
-            const valNum = Number(document.getElementById('valDisplay').value) || 0;
-            if (valNum === 0){
-                alert('Value is zero, cannot minus.')
-            } else {
-                const result = valNum - 1;
-                document.getElementById('valDisplay').value = result;
-                document.getElementById('valDisplay').textContent = result;
-            }
-        });
 
-        Reset.addEventListener('click', function() {
-            document.getElementById('valDisplay').value = 0;
-            document.getElementById('valDisplay').textContent = 0;
-        });
-
-        
     </script>
-    <!-- 
-    Eval script :
-        const btnPlus = document.getElementById('tambah');
-        const btnMinus = document.getElementById('kurang');
-        const btnReset = document.getElementById('reset');
-        const textDisplay = document.getElementById('valDisplay');
-    
-        let counter = 0;
-    
-        function updateDisplay() {
-            textDisplay.textContent = counter;
-        }
-    
-        btnPlus.addEventListener('click', function() {
-            counter++; // Modifikasi data pada memori variabel
-            updateDisplay(); // Render pembaruan ke layar
-        });
-    
-        btnMinus.addEventListener('click', function() {
-            if (counter === 0) {
-                alert('Value is zero, cannot minus.');
-                return; // Early Return: hentikan eksekusi kode lebih lanjut di sini
-            }
-    
-            counter--;
-            updateDisplay();
-        });
-    
-        btnReset.addEventListener('click', function() {
-            counter = 0;
-            updateDisplay();
-        });
-    
-        updateDisplay(); 
-    -->
 </body>
 </html>
