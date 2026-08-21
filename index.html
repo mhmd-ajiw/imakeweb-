@@ -2,29 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width= , initial-scale=1.0">
-    <title>Exercise 2 DOM JS</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation 1</title>
 </head>
 <body>
-    <div class="container">
-        <div class="input-area">
-            <input type="text" id="input-txt">
-            <button id="btn-input">Tambah</button>
-        </div>
-        <hr>
-        <ul id="list-area">
-
-        </ul>
+    <div id="dashboard">
+        <h2>Total Skor: <span id="skor-tampilan">0</span></h2>
+    </div>
+    
+    <!-- Terminal Induk / Kontainer Utama -->
+    <div id="panel-kontrol">
+        <button class="tombol-aksi" data-nilai="10">Tambah 10</button>
+        <button class="tombol-aksi" data-nilai="50">Tambah 50</button>
+        <button class="tombol-aksi" data-nilai="-20">Kurang 20</button>
+    
+        <!-- Area non-interaktif untuk menguji validasi target Anda -->
+        <p>Area log kosong (abaikan jika diklik)</p>
     </div>
 
     <script>
-        const txt = document.getElementById('input-txt');
-        const btn = document.getElementById('btn-input');
-        const listForm = document.getElementById('list-area');
+        const parrentDash = document.getElementById('panel-kontrol');
+        const scoreDis = document.getElementById('skor-tampilan');
 
+        let score = 0;
 
-
+        parrentDash.addEventListener('click', function(event) {
+            if(event.target.classList.contains('tombol-aksi')){
+                // const plusScore = Number(event.target.getAttribute('data-nilai'));
+                const plusScore = Number(event.target.dataset.nilai);
+                
+                score = score + plusScore;
+                scoreDis.textContent = score;
+                console.log('Berhasil ditambahkan.')
+            }
+        });
     </script>
 </body>
 </html>
