@@ -6,36 +6,38 @@
     <title>Event Delegation 1</title>
 </head>
 <body>
-    <div id="dashboard">
-        <h2>Total Skor: <span id="skor-tampilan">0</span></h2>
+    <div id="kontrol-utama">
+        <button id="btn-tambah-log">Catat Kedatangan Baru</button>
     </div>
     
-    <!-- Terminal Induk / Kontainer Utama -->
-    <div id="panel-kontrol">
-        <button class="tombol-aksi" data-nilai="10">Tambah 10</button>
-        <button class="tombol-aksi" data-nilai="50">Tambah 50</button>
-        <button class="tombol-aksi" data-nilai="-20">Kurang 20</button>
-    
-        <!-- Area non-interaktif untuk menguji validasi target Anda -->
-        <p>Area log kosong (abaikan jika diklik)</p>
+    <!-- Terminal Induk / Kontainer Event Delegation -->
+    <div id="panel-log" style="margin-top: 20px; border: 1px solid #ccc; padding: 10px; min-height: 50px;">
+        <!-- Tombol-tombol log akan disuntikkan ke sini secara dinamis -->
     </div>
 
     <script>
-        const parrentDash = document.getElementById('panel-kontrol');
-        const scoreDis = document.getElementById('skor-tampilan');
+       const newBtn = document.getElementById('btn-tambah-log');
+       const containerLog = document.getElementById('panel-log');
 
-        let score = 0;
+       newBtn.addEventListener('click', function() {
+            if(event.target.id === 'btn-tambah-log'){
+                const addBtn  = document.createElement('button');
 
-        parrentDash.addEventListener('click', function(event) {
-            if(event.target.classList.contains('tombol-aksi')){
-                // const plusScore = Number(event.target.getAttribute('data-nilai'));
-                const plusScore = Number(event.target.dataset.nilai);
-                
-                score = score + plusScore;
-                scoreDis.textContent = score;
-                console.log('Berhasil ditambahkan.')
+                addBtn.textContent = 'Bus Tiba (Klik untuk Selesaikan)';
+                addBtn.classList.add('item-log');
+                addBtn.style.margin = '3px';
+                addBtn.style.padding = '5px';
+                containerLog.appendChild(addBtn);
             }
-        });
+       });
+
+       containerLog.addEventListener('click', function(event) {
+            if(event.target.classList.contains('item-log')) {
+                event.target.textContent = 'Selesai';
+                event.target.style.backgroundColor = 'Gray';
+                event.target.style.color = 'White';
+            }
+       });
     </script>
 </body>
 </html>
